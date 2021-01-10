@@ -21,7 +21,7 @@ namespace LinqPractice
                 "Fiuta",
                 "",
                 "Kośmiński"
-            }
+            };
 
 
             var listOfUsers = new List<User>
@@ -48,9 +48,19 @@ namespace LinqPractice
             };
 
             var list1 = listOfInts.Select(x => x + 2).ToList();                  // skrót
-            
             listOfInts.Select(x => {return x + 2;});        // robi to samo co wyżej
+            
+            foreach (var integer in list1)
+            {
+                System.Console.WriteLine(integer);
+            }
 
+            var listOfNameUsers = listOfUsers.Where(x => x != null).Select(x => x.FirstName).ToList();
+
+            foreach (var name in listOfNameUsers)
+            {
+                System.Console.WriteLine(name);
+            }
 
             // Func<int, int> power = (a) => { return a * a; };
             // Action functionLambda2 = () => { Console.WriteLine("Hi"); };

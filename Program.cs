@@ -21,7 +21,7 @@ namespace LinqPractice
                 "Fiuta",
                 "",
                 "Kośmiński"
-            }
+            };
 
 
             var listOfUsers = new List<User>
